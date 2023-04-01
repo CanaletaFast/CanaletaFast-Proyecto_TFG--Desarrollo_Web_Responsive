@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="teslaReservaFinalizada.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&family=Wallpoet&display=swap" rel="stylesheet">
+    <title>E-fast</title>
+</head>
+<body onload="obtenerTamanioActual();" onresize="obtenerTamanioActual();"><!--Obtiene tamaño de la Ventana según cambie su tamaño-->
+    <header class="header"><!--nav-->
+        <nav class="nav container">
+            <img src="images/logo-empresa.png" class="nav_logo"> 
+            <input type="checkbox" id="check">
+            <label for="check" class="nav_hamburguer"> 
+                <img src="images/icon-hamburger.svg" class="nav_hamburguer"> 
+            </label>
+            <ul class="container__menu__responsive">
+                <li class="container__menu__responsive-item" class="container__menu__responsive-item-inicio">
+                    <a class="inicio" href="index.html">Inicio</a><!--esta activo y envia a la página prinicpal (index.html)-->
+                </li>
+                <li class="container__menu__responsive-item" >
+                    <a class="container__menu__responsive-item-vehiculo" href="#vehiculos">Vehículos</a>
+                </li>
+                <li class="container__menu__responsive-item">
+                    <a href="#contactos" class="contactos__solicitado">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header> 
+        <main><!--main-->
+
+            <!--Felicidades por su reserva-->
+            <section class="contenedor__caja__pago" id="pago__realizado">
+                <div class="contenedor__caja__pago__realizado">
+                    <div class="pago__realizado__tesla">
+                        <a class="pago__realizado__tesla__imagen">
+                            <img src="images/Pago-realizado.png" class="imagenCoche">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="reserva__realizada">
+                <div class="reserva__realizada__correctamente">
+                    <h3 class="reserva__realizada__correctamente-p">Su reserva se ha realizado correctamente, recibiras un correo con la confirmación.<br>Muchas gracias por su reserva.</br></h3>
+                </div>     
+            </section>
+            <!--CONTACTO Y CONTACTANOS OCULTO-->
+            <section class="contenedor__contacto__contactanos" id="contactos">
+                <section class="contenedor__cerrar">
+                    <div class="contenedor__cerrar__contacto">
+                        <div class="contendor__icono">
+                            <a href="teslaReservaFinalizada.html" class="contendor__icono__cerrado">
+                                <img src="images/iconoCerrar.svg" class="iconoCerrar">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="contenedor__logo" id="pago__realizado">
+                    <div class="contenedor__logo__contacto">
+                        <div class="">
+                            <a href="" class="">
+                                <img src="images/logo-empresa.png" class="iconoLogo">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="reserva__realizada">
+                    <div class="reserva__realizada__correctamente">
+                        <h2 class="reserva__realizada__correctamente-p">Déjanos tus datos y contactaremos contigo lo antes posible.</h2>
+                    </div>
+                    
+                </section>
+    
+                <section class="contenedor__form">
+                    <form action="" id="form" class="form">
+                        <!-- Nombre -->
+                        <div class="form__grupo" id="grupo__nombre">
+                            <label for="nombre" class="form__label">Nombre</label>
+                            <div class="form__grupo-input">
+                                <input type="text" class="form__input" name="nombre" id="nombre" placeholder="felipe">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">El nombre no puede estar vacio</p>
+                        </div>
+                        <!-- Email -->
+                        <div class="form__grupo" id="grupo__email">
+                            <label for="email" class="form__label">Email</label>
+                            <div class="form__grupo-input">
+                                <input type="email" class="form__input" name="email" id="email" placeholder="felipe@gma.com">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">Completa el email</p>
+                        </div>			
+                        <!-- Teléfono -->
+                        <div class="form__grupo" id="grupo__telefono">
+                            <label for="telefono" class="form__label">Teléfono</label>
+                            <div class="form__grupo-input">
+                                <input type="number" class="form__input" name="telefono" id="telefono" placeholder="665842987">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">Debe de haber 9 dígitos</p>
+                        </div>					
+                        <!-- Comentarios -->
+                        <div class="comentario__texto">
+                            <label for="comentario">Comentarios</label>
+                            <textarea ></textarea>
+                        </div>
+                        <!-- terminos -->
+                        <div class="formulario__grupo" id="grupo__terminos">
+                            <label class="formulario__label">
+                                <p><input type="checkbox" class="cajaBox form__checkbox" name="terminos" id="terminos">Acepto la <span style="color: blue;">política de privacidad</span> y el envío de comunicaciones informativas</p>
+                            </label>
+                        </div>
+                        <button class="boton__enviar__formulario">ENVIAR</button>
+                    </form>
+                </section>
+            </section>
+             <!--CONTACTO Y CONTACTANOS OCULTO-->
+             <section class="contenedor__contacto__contactanos" id="contactos">
+                <section class="contenedor__cerrar">
+                    <div class="contenedor__cerrar__contacto">
+                        <div class="contendor__icono">
+                            <a href="teslaReservaFinalizada.html" class="contendor__icono__cerrado">
+                                <img src="images/iconoCerrar.svg" class="iconoCerrar">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="contenedor__logo" id="pago__realizado">
+                    <div class="contenedor__logo__contacto">
+                        <div class="">
+                            <a href="" class="">
+                                <img src="images/logo-empresa.png" class="iconoLogo">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="reserva__realizada">
+                    <div class="reserva__realizada__correctamente">
+                        <h2 class="reserva__realizada__correctamente-p">Déjanos tus datos y contactaremos contigo lo antes posible.</h2>
+                    </div>
+                    
+                </section>
+    
+                <section class="contenedor__form">
+                    <form action="" id="form" class="form">
+                        <!-- Nombre -->
+                        <div class="form__grupo" id="grupo__nombre">
+                            <label for="nombre" class="form__label">Nombre</label>
+                            <div class="form__grupo-input">
+                                <input type="text" class="form__input" name="nombre" id="nombre" placeholder="felipe">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">El nombre no puede estar vacio</p>
+                        </div>
+                        <!-- Email -->
+                        <div class="form__grupo" id="grupo__email">
+                            <label for="email" class="form__label">Email</label>
+                            <div class="form__grupo-input">
+                                <input type="email" class="form__input" name="email" id="email" placeholder="felipe@gma.com">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">Completa el email</p>
+                        </div>			
+                        <!-- Teléfono -->
+                        <div class="form__grupo" id="grupo__telefono">
+                            <label for="telefono" class="form__label">Teléfono</label>
+                            <div class="form__grupo-input">
+                                <input type="number" class="form__input" name="telefono" id="telefono" placeholder="665842987">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">Debe de haber 9 dígitos</p>
+                        </div>					
+                        <!-- Comentarios -->
+                        <div class="comentario__texto">
+                            <label for="comentario">Comentarios</label>
+                            <textarea ></textarea>
+                        </div>
+                        <!-- terminos -->
+                        <div class="formulario__grupo" id="grupo__terminos">
+                            <label class="formulario__label">
+                                <p><input type="checkbox" class="cajaBox form__checkbox" name="terminos" id="terminos">Acepto la <span style="color: blue;">política de privacidad</span> y el envío de comunicaciones informativas</p>
+                            </label>
+                        </div>
+                        <button class="boton__enviar__formulario">ENVIAR</button>
+                    </form>
+                </section>
+            </section>
+            <!--contenedor__caja de imagenes Coche-->
+            <!--Contáctanos-->
+            <section class="contenedor__caja__contactanos">
+                <div class="contenedor__caja__parrafo_contactanos">
+                    <h3 class="elemento-encabezado-cliente">Servicio exclusivo al cliente</h3>
+                    <button class="boton__contáctanos">Contáctanos</button>
+                </div>
+            </section><!--Descripción y Contacto-->
+            <section class="contenedor__contacto__conocernos">
+                <div class="contenedor__contacto__conocernos__grid">
+                    <div class="contenedor__contacto__conocernos__logotipo">
+                        <img src="images/logo-empresa2.png" class="nav_logo"> 
+                    </div>
+                    <div class="contenedor__contacto__conocernos__texto">
+                        <div class="contenedor__texto">
+                            <p>En e-fast somos especialistas en alquiler de vehículos eléctricos. Descubre la comodidad y rapidez que ofrecemos a nuestros clientes.
+                                Ven a conocernos y disfruta de nuestra gama de vehículos eléctricos.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contenedor__redesSociales">
+                        <div class="contenedor__redesSociales__instagramFacebook">
+                            <img src="images/instagram.svg" class="icono_instagram"> 
+                            <img src="images/facebook.svg" class="icono_facebook"> 
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Descripción y Contacto-->
+                <div class="contenedor__contacto__conocernos__grid-sitio">
+                    <div class="contenedor__contacto__conocernos__sitio">
+                        <h2 class="conocernos__sitio"> Ven a conocernos en: </h2>
+                    </div>
+                    <div class="contenedor__contacto__conocernos__sitio__especifico">
+                        <p class="conocernos__sitio__especifico">Av. de Sarrià, 150<br>08017 Barcelona</p>
+                    </div>
+   
+                    </div>
+                    <div class="contenedor__telefono__contacto">
+                        <h2 class="contenedor__telefono__contacto__especifico">Teléfono de contacto:</h2>
+                    </div>
+                    <div class="contenedor__telefono__contacto__numero">
+                        <p class="contenedor__telefono__contacto__numero__especifico">664155888</p>
+                    </div>
+
+                    <div class="contenedor__comercial">
+                        <h2 class="contenedor__comercial__especifico">Horario comercial:</h2>
+                    </div>
+                    <div class="contenedor__comercial__horario">
+                        <p class="contenedor__comercial__horario__especifico">L-V: 09:00 – 14:00 y 16:00 – 20:00<br>S: 10:00 a 13:00<br>D: cerrado</p>
+                    </div>
+            </section>
+        </main>
+        <footer class="footer__informacion">
+            <div class="footer__informacion__contacto">
+                <p> e-fast, correo info@e-fast.com <br>Trabaja con nosotros | Aviso legal | Politica de cookies</p>
+            </div>
+        </footer>
+    <script src="teslaReservaFinalizada.js"></script>
+</body>
+</html>
