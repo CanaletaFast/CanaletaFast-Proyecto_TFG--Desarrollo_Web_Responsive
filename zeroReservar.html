@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="zeroReservar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&family=Wallpoet&display=swap" rel="stylesheet">
+    <title>E-fast</title>
+</head>
+<body onload="obtenerTamanioActual();" onresize="obtenerTamanioActual();"><!--Obtiene tamaño de la Ventana según cambie su tamaño-->
+    <header class="header"><!--nav-->
+        <nav class="nav container">
+            <img src="images/logo-empresa.png" class="nav_logo"> 
+            <input type="checkbox" id="check">
+            <label for="check" class="nav_hamburguer"> 
+                <img src="images/icon-hamburger.svg" class="nav_hamburguer"> 
+            </label>
+            <ul class="container__menu__responsive">
+                <li class="container__menu__responsive-item" class="container__menu__responsive-item-inicio">
+                    <a class="inicio" href="index.html">Inicio</a><!--esta activo y envia a la página prinicpal (index.html)-->
+                </li>
+                <li class="container__menu__responsive-item" >
+                    <a class="container__menu__responsive-item-vehiculo" href="#vehiculos">Vehículos</a>
+                </li>
+                <li class="container__menu__responsive-item">
+                    <a href="#contactos" class="contactos__solicitado">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header> 
+        <main><!--main-->
+            <!--Elección-->
+            <section class="contenedor__eleccion">
+                <div class="contenedor__eleccion__tu">
+                    <h3 class="contenedor__eleccion-parrafo">Finalización de la reserva</h3>
+                </div>   
+            </section>
+            <!--Moto zero-->
+            <section class="contenedor__caja__vehiculos__Zero" id="vehiculos">
+                <div class="contenedor__caja__vehiculos__dinamico__Zero">
+                    <div class="caja__zero">
+                        <a href="zeroCaracteristicas.html" class="caja__zero__imagen">
+                            <img src="images/Zero-SRF-360-9.png" class="imagenCoche">
+                        </a>
+                    </div>
+                </div>
+                <section class="producto__zero">
+                    <div class="producto__zero__parrafo">
+                        <h1 class="producto__zero__parrafo">Zero SR/F</h1>
+                    </div>
+                    <section class="producto__zero__caracteristicas">
+                        <div class="producto__zero__parrafo__caracteristicas">
+                            <div class="producto__zero__parrafo__velocidadPunta">
+                                <p class="producto__zero__parrafo__velocidadPunta-p"><img src="images/velocimetro.png"> 200km/h</p>
+                            </div>
+                            <div class="producto__zero__parrafo__tiempo__carga">
+                                <p class="producto__zero__parrafo__tiempo__carga-p"><img src="images/grid_iconoReloj7.svg"> 2.4h cargarla</p>
+                            </div>
+                            <div class="producto__zero__parrafo__autonomia">
+                                <p class="producto__zero__parrafo__autonomia-p"><img src="images/bateria.svg"> 272km autonomía</p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="barra__zero">
+                    <div class="barra__zero__precio">
+                        <div class="barra__zero__precio__dia">
+                            <p class="precio__dia">Precio por <span>1</span> día</p>
+                            <h3 class="precio__dia__zero-especifico"><span>79</span>€</h3>
+                            <img class="iconoCheck" src="images/check.svg">
+                            <p class="barra__precio-Cancelacion__gratuita">Cancelación gratuita</p>
+                        </div>
+                    </div>
+                    <div class="barra__oferta__zero">
+                        <img class="imagen__llave" src="images/entrega__llave.png">
+                    </div>
+                </section>  
+            </section><!--contenedor__caja de imagenes Moto-->
+            <!--FORMULARIO luego de imagen Moto-->
+            <section class="contenedor-form">
+                <div class="contenedor__form">
+                    <div class="contenedor__form__cabeza">
+                        <h2>Datos del conductor principal</h2>
+                    </div>
+                    <form action="" id="form" class="form">
+                        <!-- Nombre -->
+                        <div class="form__grupo" id="grupo__nombre">
+                            <label for="nombre" class="form__label">Nombre</label>
+                            <div class="form__grupo-input">
+                                <input type="text" class="form__input" name="nombre" id="nombre" placeholder="felipe">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">El nombre no puede estar vacio</p>
+                        </div>
+                        <!-- Apellidos -->
+                        <div class="form__grupo" id="grupo__apellidos">
+                            <label for="apellido" class="form__label">Apellidos</label>
+                            <div class="form__grupo-input">
+                                <input type="text" class="form__input" name="apellidos" id="apellidos" placeholder="garcia lorca">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">Deben ser dos apellidos</p>
+                        </div>
+                        <!-- DNI -->
+                        <div class="form__grupo" id="grupo__dni">
+                            <label for="dni" class="form__label">DNI</label>
+                            <div class="form__grupo-input">
+                                <input type="text" class="form__input" name="dni" id="dni" placeholder="46361585W">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">Completa el DNI y no pongas - </p>
+                        </div>
+                        <!-- Teléfono -->
+                        <div class="form__grupo" id="grupo__telefono">
+                            <label for="telefono" class="form__label">Teléfono</label>
+                            <div class="form__grupo-input">
+                                <input type="number" class="form__input" name="telefono" id="telefono" placeholder="665842987">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">Debe de haber 9 dígitos</p>
+                        </div>
+                        <!-- Email -->
+                        <div class="form__grupo" id="grupo__email">
+                            <label for="email" class="form__label">Email</label>
+                            <div class="form__grupo-input">
+                                <input type="email" class="form__input" name="email" id="email" placeholder="felipe@gma.com">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">Completa el email</p>
+                        </div>
+                        <!-- Comentarios -->
+                        <div class="comentario__texto">
+                            <label for="comentario">Comentarios</label>
+                            <textarea ></textarea>
+                        </div>
+                        <!-- terminos -->
+                        <div class="" id="grupo__terminos">
+                            <label class="">
+                                <p><input type="checkbox" class="cajaBox form__checkbox" name="terminos" id="terminos">Acepto la <span style="color: blue;">política de privacidad</span> y el envío de comunicaciones informativas</p>
+                            </label>
+                        </div>
+                        <button class="boton__enviar__formulario">Guardar datos</button>
+                    </form>
+                </div>
+            </section>
+            <!--FORMULARIO TARJETA DE PAGO-->
+            <section class="contenedor-form-tarjeta">
+                <div class="contenedor__form__tarjeta">
+                    <div class="contenedor__form__cabeza__tarjeta">
+                        <h2>Forma de pago</h2>
+                    </div>
+                    <form action="" class="formulario" id="formulario">
+                        <!--Nombre del titular de la tarjeta -->
+                        <div class="formulario__grupo" id="grupo__nombreTarjeta">
+                            <label for="nombreTarjeta" class="formulario__label">Nombre del titular de la tarjeta <span style="color: red;">*</span></label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input" name="nombreTarjeta" id="nombreTarjeta" placeholder="Felipe Garcia Lorca">
+                                <img  class="formulario__validacion-estado">
+                            </div>
+                            <p class="formulario__input-error">El nombre de la tarjeta no puede estar vacio</p>
+                        </div>
+            
+                        <!--Número de la tarjeta -->
+                        <div class="formulario__grupo" id="grupo__numeroTarjeta">
+                            <label for="numeroTarjeta" class="formulario__label">Número de la tarjeta <span style="color: red;">*</span></label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input" name="numeroTarjeta" id="numeroTarjeta" placeholder="5458 6359 2586 4236">
+                                <img  class="formulario__validacion-estado">
+                            </div>
+                            <p class="formulario__input-error">Completa el número de tarjeta, utiliza espacios xxxx xxxx xxxx xxxx</p>
+                        </div>
+            
+                        <!--Fecha de caducidad -->
+                        <div class="formulario__grupo" id="grupo__fechaCaducidad">
+                            <label for="fechaCaducidad" class="formulario__label">Fecha de caducidad <span style="color: red;">*</span></label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input" name="fechaCaducidad" id="fechaCaducidad" placeholder="MM / AA">
+                                <img  class="formulario__validacion-estado">
+                            </div>
+                            <p class="formulario__input-error">Completa el número de tarjeta, utiliza barra sin espacio MM/AA</p>
+                        </div>
+            
+                        <!--CVC -->
+                        <div class="formulario__grupo" id="grupo__cvc">
+                            <label for="cvc" class="formulario__label">CVC <span style="color: red;">*</span></label>
+                            <div class="formulario__grupo-input">
+                                <input type="number" class="formulario__input" name="cvc" id="cvc" placeholder="123">
+                                <img  class="formulario__validacion-estado">
+                            </div>
+                            <p class="formulario__input-error">Completa el cvc de la tarjeta con 3 dígitos</p>
+                        </div>
+            
+                         <!--Desglose del precio del moto-->
+                        <section class="contenedor__desglose">
+                        <div class="contenedor__desglose__precioCoche">
+                            <h3 class="contenedor__desglose__precioCoche-parrafo">Desglose del precio de la moto</h3>
+                        </div> 
+                        </section>
+                        <section class="contenedor__desglose__total">
+                            <div class="contenedor__desglose__total__precio">
+                                <div class="contenedor__desglose__total__precio-parrafo">Precio del alquiler</div>
+                                <div class="contenedor__desglose__total__precio-parrafo">79€</div>
+                            </div> 
+                        </section>
+                        <section class="contenedor__desglose__total__final">
+                            <div class="contenedor__desglose__total__final__precio">
+                                <div class="contenedor__desglose__total__final__precio-parrafoDia">Precio por <span>1</span> día:</div>
+                                <div class="contenedor__desglose__total__final__precio-parrafo"><span>79</span>€</div>
+                            </div> 
+                        </section>
+                        <!--Términos y condiciones-->
+                        <section class="contenedor__terminos">
+                            <div class="contenedor__terminos__condiciones">
+                                <div class="contenedor__terminos__condiciones__cabeza">
+                                    <h2>Términos y condiciones</h2>
+                                    <div>
+                                        <p class="contenedor__terminos__condiciones-p">Al hacer clic en "Reservar", confirmas que has leído y que comprendes y aceptas nuestros <span style="color: blue;">Términos generales</span>, las <span style="color: blue;">Condiciones de la póliza</span> y las <span style="color: blue;">Condiciones del alquiler de e-Fast</span>.</p>
+                                        </div>
+                                </div>
+                        </section>
+                            <!--Boton Reservar-->
+                        <section class="contenedor__boton__reserva">
+                            <div class="contenedor__boton__reserva__final">
+                                <a href="" class="contenedor__boton"><!-- link-->
+                                    <button type="submit" formaction="zeroReservaFinalizada.html" class="contenedor__boton-forma">Confirmar pago</button>
+                                </a>
+                            </div>
+                        </section>
+                    </form>
+                </div>
+            </section>
+            <!--CONTACTO Y CONTACTANOS OCULTO-->
+            <section class="contenedor__contacto__contactanos" id="contactos">
+                <section class="contenedor__cerrar">
+                    <div class="contenedor__cerrar__contacto">
+                        <div class="contendor__icono">
+                            <a href="zeroReservar.html" class="contendor__icono__cerrado">
+                                <img src="images/iconoCerrar.svg" class="iconoCerrar">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="contenedor__logo" id="pago__realizado">
+                    <div class="contenedor__logo__contacto">
+                        <div class="">
+                            <a href="" class="">
+                                <img src="images/logo-empresa.png" class="iconoLogo">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="reserva__realizada">
+                    <div class="reserva__realizada__correctamente">
+                        <h2 class="reserva__realizada__correctamente-p">Déjanos tus datos y contactaremos contigo lo antes posible.</h2>
+                    </div>
+                    
+                </section>
+    
+                <section class="contenedor__form1">
+                    <form action="" id="form" class="form">
+                        <!-- Nombre -->
+                        <div class="form__grupo" id="grupo__nombre">
+                            <label for="nombre" class="form__label">Nombre</label>
+                            <div class="form__grupo-input">
+                                <input type="text" class="form__input" name="nombre" id="nombre" placeholder="felipe">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">El nombre no puede estar vacio</p>
+                        </div>
+                        <!-- Email -->
+                        <div class="form__grupo" id="grupo__email">
+                            <label for="email" class="form__label">Email</label>
+                            <div class="form__grupo-input">
+                                <input type="email" class="form__input" name="email" id="email" placeholder="felipe@gma.com">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">Completa el email</p>
+                        </div>			
+                        <!-- Teléfono -->
+                        <div class="form__grupo" id="grupo__telefono">
+                            <label for="telefono" class="form__label">Teléfono</label>
+                            <div class="form__grupo-input">
+                                <input type="number" class="form__input" name="telefono" id="telefono" placeholder="665842987">
+                                <img  class="form__validacion-estado">
+                            </div>
+                            <p class="form__input-error">Debe de haber 9 dígitos</p>
+                        </div>					
+                        <!-- Comentarios -->
+                        <div class="comentario__texto">
+                            <label for="comentario">Comentarios</label>
+                            <textarea ></textarea>
+                        </div>
+                        <!-- terminos -->
+                        <div class="formulario__grupo" id="grupo__terminos">
+                            <label class="formulario__label">
+                                <p><input type="checkbox" class="cajaBox form__checkbox" name="terminos" id="terminos">Acepto la <span style="color: blue;">política de privacidad</span> y el envío de comunicaciones informativas</p>
+                            </label>
+                        </div>
+                        <button class="boton__enviar__formulario">ENVIAR</button>
+                    </form>
+                </section>
+            </section>
+            <!--contenedor__caja de imagenes Zero-->
+            <!--Contáctanos-->
+            <section class="contenedor__caja__contactanos">
+                <div class="contenedor__caja__parrafo_contactanos">
+                    <h3 class="elemento-encabezado-cliente">Servicio exclusivo al cliente</h3>
+                    <button class="boton__contáctanos">Contáctanos</button>
+                </div>
+            </section><!--Descripción y Contacto-->
+            <section class="contenedor__contacto__conocernos">
+                <div class="contenedor__contacto__conocernos__grid">
+                    <div class="contenedor__contacto__conocernos__logotipo">
+                        <img src="images/logo-empresa2.png" class="nav_logo"> 
+                    </div>
+                    <div class="contenedor__contacto__conocernos__texto">
+                        <div class="contenedor__texto">
+                            <p>En e-fast somos especialistas en alquiler de vehículos eléctricos. Descubre la comodidad y rapidez que ofrecemos a nuestros clientes.
+                                Ven a conocernos y disfruta de nuestra gama de vehículos eléctricos.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contenedor__redesSociales">
+                        <div class="contenedor__redesSociales__instagramFacebook">
+                            <img src="images/instagram.svg" class="icono_instagram"> 
+                            <img src="images/facebook.svg" class="icono_facebook"> 
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Descripción y Contacto-->
+                <div class="contenedor__contacto__conocernos__grid-sitio">
+                    <div class="contenedor__contacto__conocernos__sitio">
+                        <h2 class="conocernos__sitio"> Ven a conocernos en: </h2>
+                    </div>
+                    <div class="contenedor__contacto__conocernos__sitio__especifico">
+                        <p class="conocernos__sitio__especifico">Av. de Sarrià, 150<br>08017 Barcelona</p>
+                    </div>
+   
+                    </div>
+                    <div class="contenedor__telefono__contacto">
+                        <h2 class="contenedor__telefono__contacto__especifico">Teléfono de contacto:</h2>
+                    </div>
+                    <div class="contenedor__telefono__contacto__numero">
+                        <p class="contenedor__telefono__contacto__numero__especifico">664155888</p>
+                    </div>
+
+                    <div class="contenedor__comercial">
+                        <h2 class="contenedor__comercial__especifico">Horario comercial:</h2>
+                    </div>
+                    <div class="contenedor__comercial__horario">
+                        <p class="contenedor__comercial__horario__especifico">L-V: 09:00 – 14:00 y 16:00 – 20:00<br>S: 10:00 a 13:00<br>D: cerrado</p>
+                    </div>
+            </section>
+        </main>
+        <footer class="footer__informacion">
+            <div class="footer__informacion__contacto">
+                <p> e-fast, correo info@e-fast.com <br>Trabaja con nosotros | Aviso legal | Politica de cookies</p>
+            </div>
+        </footer>
+    <script src="zeroReservar.js"></script>
+</body>
+</html>
